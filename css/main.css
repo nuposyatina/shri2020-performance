@@ -668,6 +668,10 @@ html {
     width: 47px
 }
 
+.card-icon-camera {
+    overflow: hidden;
+}
+
 .card-title {
     font-size: 24px;
     font-weight: 700;

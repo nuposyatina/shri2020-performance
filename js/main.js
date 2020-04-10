@@ -40,43 +40,6 @@ const rotateToValue = function(rotate) {
     return Math.floor((Math.abs(rotate * 360 * 1.73 + INDICATOR_OFFSET) / 53) + MIN_VALUE);
 }
 
-function stopDragging(e) {
-    knobDragged = false;
-}
-
-function dragRotate(e) {
-    if (!knobDragged) {
-        return;
-    }
-
-    const old = prevAngleRad;
-    let rad = getMouseAngle(e, document.querySelector('.knob_center'));
-    let delta = rad - old;
-
-    prevAngleRad = rad;
-
-    if (delta < 0) {
-        delta += Math.PI * 2;
-    }
-    if (delta > Math.PI) {
-        delta -= Math.PI * 2;
-    }
-
-    const deltaRotate = delta / Math.PI / 2;
-    const rotate = prevRotate + deltaRotate;
-
-    prevRotate = rotate;
-    setRotate(rotate);
-}
-
-function setEvtListeners() {
-    const elem = document.querySelector('.knob-container');
-
-}
-
-setEvtListeners();
-
-
 document.querySelectorAll('.modal_close').forEach(b => {
     b.onclick = function() {
         document.querySelectorAll('.modal').forEach(m => {

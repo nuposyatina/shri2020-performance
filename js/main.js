@@ -40,15 +40,6 @@ const rotateToValue = function(rotate) {
     return Math.floor((Math.abs(rotate * 360 * 1.73 + INDICATOR_OFFSET) / 53) + MIN_VALUE);
 }
 
-function getPosition(elem) {
-    const rect = elem.getBoundingClientRect();
-
-    return [
-        rect.left + (rect.right - rect.left) / 2,
-        rect.top + (rect.bottom - rect.top) / 2
-    ];
-}
-
 function getMouseAngle(event, centerElem) {
     const pos = getPosition(centerElem);
     let cursor = [event.clientX, event.clientY];

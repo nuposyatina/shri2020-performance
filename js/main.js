@@ -63,24 +63,6 @@ document.querySelectorAll('.modal__filter-item_temp').forEach(l => {
     }
 });
 
-const showModal = function(selector) {
-    document.querySelector(selector).classList.toggle('modal_open', true);
-    document.querySelector('body').style.overflow = 'hidden';
-}
-
-
-document.querySelectorAll('.panel_lamp').forEach(p => {
-    p.onclick = function() {
-        showModal('.modal_light');
-    }
-});
-
-document.querySelectorAll('.panel_floor').forEach(p => {
-    p.onclick = function() {
-        showModal('.modal_knob');
-    }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     $('.card').each(function(e) {
         if ($(this).hasClass('card_size_s')) {

@@ -40,21 +40,6 @@ const rotateToValue = function(rotate) {
     return Math.floor((Math.abs(rotate * 360 * 1.73 + INDICATOR_OFFSET) / 53) + MIN_VALUE);
 }
 
-function getMouseAngle(event, centerElem) {
-    const pos = getPosition(centerElem);
-    let cursor = [event.clientX, event.clientY];
-    let rad;
-
-    if (event.targetTouches && event.targetTouches[0]) {
-        cursor = [event.targetTouches[0].clientX, event.targetTouches[0].clientY];
-    }
-
-    rad = Math.atan2(cursor[1] - pos[1], cursor[0] - pos[0]);
-    rad += Math.PI / 2;
-
-    return rad;
-}
-
 let knobDragged;
 let prevAngleRad = null;
 let prevRotate = null;

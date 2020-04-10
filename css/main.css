@@ -668,6 +668,10 @@ html {
     width: 47px
 }
 
+.card-icon-cam {
+    overflow: hidden;
+}
+
 .card-title {
     font-size: 24px;
     font-weight: 700;
@@ -1072,10 +1076,6 @@ html {
 
     .card-icon {
         width: 35px
-    }
-
-    .card-icon-cam {
-        overflow: hidden;
     }
 
     .card-title {

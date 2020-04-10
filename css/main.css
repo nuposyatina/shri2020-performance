@@ -744,9 +744,10 @@ html {
     display: block;
     background: url(../img/cam2.jpg);
     border-radius: 20px;
-    background-size: cover;
-    background-position: 0 0;
-    touch-action: none
+    touch-action: none;
+    background-position: 0px 0px;
+    background-size: 100%;
+    filter: brightness(100%);
 }
 
 .card-data_graph {

@@ -40,26 +40,6 @@ const rotateToValue = function(rotate) {
     return Math.floor((Math.abs(rotate * 360 * 1.73 + INDICATOR_OFFSET) / 53) + MIN_VALUE);
 }
 
-
-/**
- * @param {Number} rotate Количество оборотов от нейтриального положения.
- */
-function setRotate(rotate) {
-    if (rotate > maxRotate) {
-        rotate = maxRotate;
-    } else if (rotate < minRotate) {
-        rotate = minRotate;
-    }
-
-    curRotate = rotate;
-    curValue = rotateToValue(rotate);
-
-    document.querySelector('.modal_knob .modal__value').innerHTML = '+' + curValue;
-    document.querySelector('.knob__value').innerHTML = '+' + curValue;
-    document.querySelector('.knob__indicator').style.strokeDasharray = curRotate * 360 * 1.73 + INDICATOR_OFFSET + ' 629';
-    document.querySelector('.knob__arrow').style.transform = 'rotate(' + (curRotate * 360) + 'deg)';
-}
-
 function getPosition(elem) {
     const rect = elem.getBoundingClientRect();
 

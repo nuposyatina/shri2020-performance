@@ -1074,6 +1074,10 @@ html {
         width: 35px
     }
 
+    .card-icon-cam {
+        overflow: hidden;
+    }
+
     .card-title {
         font-size: 14px;
         padding-left: 16px;

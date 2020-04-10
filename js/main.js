@@ -40,20 +40,6 @@ const rotateToValue = function(rotate) {
     return Math.floor((Math.abs(rotate * 360 * 1.73 + INDICATOR_OFFSET) / 53) + MIN_VALUE);
 }
 
-let knobDragged;
-let prevAngleRad = null;
-let prevRotate = null;
-
-function startDragging(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    const rad = getMouseAngle(e, document.querySelector('.knob_center'));
-
-    knobDragged = true;
-    prevAngleRad = rad;
-    prevRotate = curRotate;
-}
-
 function stopDragging(e) {
     knobDragged = false;
 }

@@ -1,19 +1,5 @@
 "use strict";
 
-const TEMPS = {
-    'manual': -10,
-    'cold': 0,
-    'warm': 23,
-    'hot': 30
-}
-
-document.querySelectorAll('.modal__filter-item_temp').forEach(l => {
-    l.onclick = function() {
-        document.querySelector('.adjust-bar_theme_temp').value = TEMPS[this.id];
-        document.querySelector('.modal_temp .modal__value').innerHTML = TEMPS[this.id] > 0 ? '+' + TEMPS[this.id] : TEMPS[this.id];
-    }
-});
-
 
 const arrowLeftScens = document.querySelector('.scenarios__paginator .paginator__arrow_left');
 const arrowRightScens = document.querySelector('.scenarios__paginator .paginator__arrow_right');

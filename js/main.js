@@ -1,24 +1,4 @@
 "use strict";
-
-
-const arrowLeftScens = document.querySelector('.scenarios__paginator .paginator__arrow_left');
-const arrowRightScens = document.querySelector('.scenarios__paginator .paginator__arrow_right');
-const panelCountScens = document.querySelectorAll('.scenarios__panel').length;
-const pageCountScens = document.querySelectorAll('.scenarios__page').length;
-const scenarios = document.querySelector('.scenarios');
-const pagiantorScens = document.querySelector('.scenarios__paginator');
-let currentPage = 1;
-
-
-
-
-const selectButton = document.querySelector('.filter__select-button');
-const selectButtonText = document.querySelector('.filter__select-button .button__text');
-const selectOptions = document.querySelectorAll('.filter__select-item');
-const popup = document.querySelector('.filter__select-popup');
-
-
-
 let widths = '';
 window.addEventListener('scroll', function() {
     widths += document.querySelectorAll('body')[0].offsetWidth;

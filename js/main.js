@@ -1,34 +1,5 @@
 "use strict";
 
-
-
-const output = document.querySelector('.modal__value');
-const rangeSLider = document.querySelector('.adjust-bar.adjust-bar_theme_temp');
-
-const arrowLeftDevs = document.querySelector('.devices__paginator .paginator__arrow_left');
-const arrowRightDevs = document.querySelector('.devices__paginator .paginator__arrow_right');
-const panelCountDevs = document.querySelectorAll('.devices__panel').length;
-const devices = document.querySelector('.devices');
-const pagiantorDevs = document.querySelector('.devices__paginator');
-let currentPageDevs = 1;
-
-$('.card').each(function(e) {
-    if ($(this).hasClass('card_size_s')) {
-        $(this).css({'border-radius': '22px'})
-    } else {
-        $(this).css({'border-radius': '54px'})
-    }
-});
-
-document.querySelectorAll('.modal_close').forEach(b => {
-    b.onclick = function() {
-        document.querySelectorAll('.modal').forEach(m => {
-            m.classList.toggle('modal_open', false);
-            document.querySelector('body').style.overflow = 'auto';
-        });
-    }
-});
-
 const TEMPS = {
     'manual': -10,
     'cold': 0,

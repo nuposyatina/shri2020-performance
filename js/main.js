@@ -1,5 +1,4 @@
 "use strict";
-const selectButton = document.querySelector('.filter__select-button');
 const selectButtonText = document.querySelector('.filter__select-button .button__text');
 const selectOptions = document.querySelectorAll('.filter__select-item');
 const popup = document.querySelector('.filter__select-popup');
@@ -22,14 +21,6 @@ selectOptions.forEach(o => {
         selectButtonText.innerText = e.target.innerText;
     })
 });
-
-function status(e) {
-    return 200 <= e.status && e.status < 300 ? Promise.resolve(e) : Promise.reject(new Error(e.statusText))
-}
-
-function json(e) {
-    return e.json()
-}
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttonsContainer = document.querySelector(".buttons-wrap");

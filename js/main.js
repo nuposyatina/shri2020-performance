@@ -3,14 +3,6 @@ const selectButtonText = document.querySelector('.filter__select-button .button_
 const selectOptions = document.querySelectorAll('.filter__select-item');
 const popup = document.querySelector('.filter__select-popup');
 
-
-
-let widths = '';
-window.addEventListener('scroll', function() {
-    widths += document.querySelectorAll('body')[0].offsetWidth;
-
-});
-
 selectOptions.forEach(o => {
     o.addEventListener('click', function(e) {
         document.querySelector('#' + e.target.dataset.group).checked = true;

@@ -20,20 +20,6 @@ $('.card').each(function(e) {
     }
 });
 
-
-let curValue;
-let curRotate;
-let maxRotate = 0.42; // 150 градусов
-let minRotate = -0.42; // -150 градусов
-
-const MIN_VALUE = 26;
-const MAX_VALUE = 35;
-const INDICATOR_OFFSET = 265;
-
-const rotateToValue = function(rotate) {
-    return Math.floor((Math.abs(rotate * 360 * 1.73 + INDICATOR_OFFSET) / 53) + MIN_VALUE);
-}
-
 document.querySelectorAll('.modal_close').forEach(b => {
     b.onclick = function() {
         document.querySelectorAll('.modal').forEach(m => {
